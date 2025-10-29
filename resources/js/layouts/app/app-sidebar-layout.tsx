@@ -13,8 +13,9 @@ export default function AppSidebarLayout({
 }: PropsWithChildren<{ breadcrumbs?: BreadcrumbItem[] }>) {
     return (
         <AppShell variant="sidebar">
-            <AppSidebar />
-            <div className="w-full flex flex-col gap-4">
+            <div className="fixed inset-0 bg-white"></div>
+            <AppSidebar className="z-10"/>
+            <div className="w-full flex flex-col z-10 gap-4">
                 <div className="bg-zinc-100 rounded-b-xl shadow w-full text-black flex p-4 items-center justify-between">
                     <div className="flex gap-4">
                         <SidebarTrigger className="-ml-1" />

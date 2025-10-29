@@ -26,11 +26,6 @@ const sidebarNavItems: NavItem[] = [
         href: show(),
         icon: null,
     },
-    {
-        title: 'Appearance',
-        href: editAppearance(),
-        icon: null,
-    },
 ];
 
 export default function SettingsLayout({ children }: PropsWithChildren) {
@@ -57,8 +52,8 @@ export default function SettingsLayout({ children }: PropsWithChildren) {
                                 size="sm"
                                 variant="ghost"
                                 asChild
-                                className={cn('w-full justify-start', {
-                                    'bg-muted': isSameUrl(
+                                className={cn('w-full hover:bg-zinc-900 hover:text-white justify-start', {
+                                    'bg-zinc-900 text-white': isSameUrl(
                                         currentPath,
                                         item.href,
                                     ),
